@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.btn{
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+
+    transition: all 500ms ease;
+}
+.btn:hover{
+    background-color: gray;
+    color: white;
+}

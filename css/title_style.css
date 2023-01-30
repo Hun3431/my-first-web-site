@@ -1,0 +1,44 @@
+.title_color{
+    background-color:darkgreen;
+    color: blanchedalmond;
+}
+.title_style{
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.title_padding{
+    padding: 30px;
+}
+body{
+    margin: 0px;
+}
+.profile_img{
+    height: 5%;
+    width: 5%;
+    float:right;
+}
+.chart_align{
+    height: 5%;
+    width: 5%;
+    float:left;
+}
+
+
+.main{
+    text-align: center;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    border: darkgreen solid 5px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.main_margin{
+    margin:4% 0;
+    text-align: center;
+}

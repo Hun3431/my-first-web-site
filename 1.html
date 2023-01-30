@@ -4,65 +4,218 @@
 <head>
     <title>HTML - html</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/title_style.css">
+    <link rel="stylesheet" href="css/gray_button.css">
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 
+ <style>
+
+ </style>
+
 <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <ol>
-        <li><a href="1.html">HTML</a><br></li>
-        <li><a href="2.html">CSS</a><br></li>
-        <li><a href="3.html">JavaScript</a><br></li>
-    </ol>
-    <h2>HTML<img src="html이미지.svg" width="20"></h2>
-    <p>
-    <h3>TAG</h3>
-    <p>
-
-    <p>
-        진하게 : &lt;strong&gt;&lt;/strong&gt;
-        <br>Ex) strong -> <strong>strong</strong>
-    </p>
-
-    <p>
-        밑줄(under line) : &lt;u&gt;&lt;/u&gt;
-        <br>Ex)under line -> <u>under line</u>
-    </p>
-
-    <p>
-        제목 : &lt;h1&gt;&lt;/h1&gt; ~ &lt;h6&gt;&lt;/h6&gt;
-        <br>Ex)
-        <h1>&lt;h1&gt;Title</h1>
-        <h2>&lt;h2&gt;Title</h2>
-        <h3>&lt;h3&gt;Title</h3>
-        <h4>&lt;h4&gt;Title</h4>
-        <h5>&lt;h5&gt;Title</h5>
-        <h6>&lt;h6&gt;Title</h6>
-    </p>
-
-    <p> 줄넘김 : &lt;br&gt;</p>
-
-    <p> 단락 : &lt;p&gt;&lt;/p&gt;</p>
-    <p> 목차 : &lt;li&gt;&lt;/li&gt;</p>
-    <p> 목차 그룹(Ordered List) : &lt;ul&gt;&lt;/ul&gt;</p>
-    <p> 목차 숫자그룹(Unordered List) : &lt;ol&gt;&lt;/ol&gt;</p>
-    <p> 
-        링크 : &lt;a&gt;&lt;/a&gt;
-        <br>Ex) <a href="https://www.naver.com">(페이지 이동)NAVER</a>
-        <br>Ex) <a href="https://www.naver.com" target="_blank">(새탭)NAVER</a>
-        <br>Ex) <a href="https://www.naver.com" title="NAVER이동">(툴팁)NAVER</a>
-    </p>
-
-    <p>페이지 제목 : &lt;title&gt;&lt;/title&gt;</p>
-    <p> 페이지 저장 형식 지정 : &lt;meta charset="utf-8"&gt;</p>
-
-    </p>
-    <p>
-    <h3>문법</h3>
-    <p>
-        속성(Attribute) : 태그만으로 정보가 부족할때 부가적으로 의미를 부여하는 것
-        <br>Ex) &lt;img width = "100%" src="html이미지.svg"&gt;
-    </p>
-    </p>
+    <div class="layout">
+        <div class="main_margin"><div class="main_color"><a href="main.html" class="main">M A I N</a></div></div>
+        <div style="text-align: center;"><input id="night_day" type="button" value="야간모드" class="btn" onclick="
+        if(document.querySelector('#night_day').value === '야간모드'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day').value = '주간모드';
+        } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value = '야간모드';
+        }
+        document.querySelector('td').style.color='black';
+        "></div>
+        <ol>
+            <li><a href="1.html">HTML</a><br></li>
+            <li><a href="2.html">CSS</a><br></li>
+            <li><a href="3.html">JavaScript</a><br></li>
+        </ol>
+        <h2>HTML<img src="html이미지.svg" width="20"></h2>
+        <dr>
+            <dt>
+                <a href="#toc_1">태그</a>
+            </dt>
+            <dt>
+                <a href="#toc_2">진하게</a>
+            </dt>
+            <dt>
+                <a href="#toc_3">밑줄</a>
+            </dt>
+            <dt>
+                <a href="#toc_4">제목</a>
+            </dt>
+            <dt>
+                <a href="#toc_5">줄넘김</a>
+            </dt>
+            <dt>
+                <a href="#toc_6">목차</a>
+            </dt>
+            <dt>
+                <a href="#toc_7">목차 그룹</a>
+            </dt>
+            <dt>
+                <a href="#toc_8">목차 숫자그룹</a>
+            </dt>
+            <dt>
+                <a href="#toc_9">단락</a>
+            </dt>
+            <dt>
+                <a href="#toc_10">링크</a>
+            </dt>
+            <dt>
+                <a href="#toc_11">페이지 제목</a>
+            </dt>
+            <dt>
+                <a href="#toc_12">페이지 저장 형식 지정</a>
+            </dt>
+            <dt>
+                <a href="#toc_13">문법</a>
+            </dt>
+            <dt>
+                <a href="#toc_14">속성</a>
+            </dt>
+        </dr>
+        <h3 id="toc_1">TAG</h3>
+        <ul>
+            <li id="toc_2">
+                진하게 : &lt;strong&gt;&lt;/strong&gt;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)<br>
+                                strong -> <strong>strong</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_3">
+                밑줄(under line) : &lt;u&gt;&lt;/u&gt;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)<br>
+                                under line -> <u>under line
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_4">
+                제목 : &lt;h1&gt;&lt;/h1&gt; ~ &lt;h6&gt;&lt;/h6&gt;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)
+                                <h1>&lt;h1&gt;Title</h1>
+                                <h2>&lt;h2&gt;Title</h2>
+                                <h3>&lt;h3&gt;Title</h3>
+                                <h4>&lt;h4&gt;Title</h4>
+                                <h5>&lt;h5&gt;Title</h5>
+                                <h6>&lt;h6&gt;Title</h6>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_5">
+                줄넘김 : &lt;br&gt;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)<br>
+                                <ul>
+                                    <li>가나다</li>
+                                    <li>라마바</li>
+                                    <li>사아자</li>
+                                    <li>차카타</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_6">
+                목차(list) : &lt;li&gt;&lt;/li&gt;<br>
+            </li>
+            <li id="toc_7">
+                목차 그룹(Ordered List) : &lt;ul&gt;&lt;/ul&gt;<br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)<br>
+                                <ol>
+                                    <li>가나다</li>
+                                    <li>라마바</li>
+                                    <li>사아자</li>
+                                    <li>차카타</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_8">
+                목차 숫자그룹(Unordered List) : &lt;ol&gt;&lt;/ol&gt;<br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex)<br>
+                                ABCD<br>EFGH
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_9">
+                단락 : &lt;p&gt;&lt;/p&gt;
+            </li>
+            <li id="toc_10">
+                링크 : &lt;a&gt;&lt;/a&gt;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex) <a href="https://www.naver.com">(페이지 이동)NAVER</a>
+                                <br>Ex) <a href="https://www.naver.com" target="_blank">(새탭)NAVER</a>
+                                <br>Ex) <a href="https://www.naver.com" title="NAVER이동">(툴팁)NAVER</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li id="toc_11">
+                페이지 제목 : &lt;title&gt;&lt;/title&gt;
+            </li>
+            <li id="toc_12">
+                페이지 저장 형식 지정 : &lt;meta charset="utf-8"&gt;
+            </li>
+        </ul>
+        <h3 id="toc_13">문법</h3>
+        <ul>
+            <li id="toc_14">
+                속성(Attribute) : 태그만으로 정보가 부족할때 부가적으로 의미를 부여하는 것
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Ex) &lt;img width = "100%" src="html이미지.svg"&gt;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>  
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STUDY_TEST</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/gray_button.css">
+        <link rel="stylesheet" href="css/title_style.css">
+    </head>
+    <style>
+        
+    </style>
+    <script>
+        function btn1(){
+            alert('TEST1로 이동합니다.');
+            window.location.href = "1.html";
+        }
+        function btn2(){
+            alert('네이버로 이동하겠습니다!');
+            window.location.href = "https://www.naver.com";
+        }
+        function btn3(){
+            // box id를 가진 요소 가져오기
+            const box = document.getElementById('box');
+            // box 에 class 토글하기
+            box.classList.toggle('hidden');
+        }
+    </script>
+    <body>
+        <div class="title_color"><div class="title_padding"><div class="title_style"><span class="chart_align"></span><span>Welecome! DoHun WebPage</span><span class="profile_align"><img class="profile_img" src="profile_img.png"></img></span></div></div></div>
+
+        <ul>
+            <li>
+                <button class="btn" onclick="btn1()">생활코딩 JavaScript 연습 페이지</button>
+            </li>
+            <li>
+                <button class="btn" onclick="btn2()">네이버</button>
+            </li>
+            <li>
+                <button class="btn" onclick="btn3()">눌러주세요!</button>
+            </li>
+        </ul>
+        
+        
+        
+    </body>
+</html>
