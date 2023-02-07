@@ -14,14 +14,17 @@ body{
     margin: 0px;
 }
 .profile_img{
-    height: 5%;
-    width: 5%;
+    height: 45px;
+    width: 45px;
     float:right;
+    cursor: pointer;
 }
 .chart_align{
-    height: 5%;
-    width: 5%;
+    height: 30px;
+    width: 30px;
     float:left;
+    margin-top: 8px;
+    cursor: pointer;
 }
 
 

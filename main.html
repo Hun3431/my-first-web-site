@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>STUDY_TEST</title>
+        <title>MAIN_PAGE</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/gray_button.css">
         <link rel="stylesheet" href="css/title_style.css">
@@ -24,9 +24,34 @@
             // box 에 class 토글하기
             box.classList.toggle('hidden');
         }
+        function chart_btn(){
+            window.location.href = "main.html";
+        }
+        function profile_btn(){
+            window.location.href = "profile.html";
+        }
+        function calender_btn(){
+            window.location.href = "calender.html";
+        }
     </script>
     <body>
-        <div class="title_color"><div class="title_padding"><div class="title_style"><span class="chart_align"></span><span>Welecome! DoHun WebPage</span><span class="profile_align"><img class="profile_img" src="profile_img.png"></img></span></div></div></div>
+        <div class="title_color">
+            <div class="title_padding">
+                <div class="title_style">
+                    <span class="wrapper">
+                        <img class="chart_align" src="img/chart1_img.png" onclick="
+                        chart_btn();
+                        ">
+                    </span>
+                    <span>Welecome! DoHun WebPage</span>
+                    <span class="profile_align">
+                        <img class="profile_img" src="img/profile_img.png" onclick="
+                        profile_btn();
+                        ">
+                    </span>
+                </div>
+            </div>
+        </div>
 
         <ul>
             <li>
@@ -37,6 +62,9 @@
             </li>
             <li>
                 <button class="btn" onclick="btn3()">눌러주세요!</button>
+            </li>
+            <li>
+                <button class="btn" onclick="calender_btn()">캘린더 만들기</button>
             </li>
         </ul>
         

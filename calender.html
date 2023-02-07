@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CALENDER-HTML</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/title_style.css">
+    <link rel="stylesheet" href="css/gray_button.css">
+</head>
+
+ <style>
+    @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .calender{
+        border-radius: 10%;
+        background-color: blanchedalmond;
+        padding: 3rem;
+    }
+    .out_line{
+        border-bottom:1px solid black;
+        border-top:1px solid black;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    table{
+        border-collapse:collapse;
+        text-align: center;
+        padding: 20%;
+        font-family: "LINESeedKR-Bd";
+    }
+    td{
+        height: 50px;
+        width: 80px;
+    }
+    .input_day{
+        height: 30px;
+        width: 50px;
+        border: 3px solid gray;
+        border-radius: 5px;
+        background-color: white;
+
+        text-align: center;
+    }
+    .btn{
+        height: 40px;
+        width: 60px;
+    }
+ </style>
+
+ <script>
+    function leap(year){
+        if(year<0){
+            alert('년도를 0보다 크게 입력하세요.');
+            return 0;
+        }
+        let day = 0;
+        for(let i = 1; i<year; i++){
+            if((i%4==0&&i%100!=0)||(i%400==0)){
+                day += 1;
+            }
+            day += 365;
+        }
+        return day;
+    }
+
+    function make_cal(year, month){
+        let day = leap(year);
+        const week = ['일','월','화','수','목','금','토'];
+        let week_day = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+        if((year%4==0&&year%100!=0)||(year%400==0)){
+            week_day[1] = 29;
+        }
+        for(let i=1; i<month; i++){
+            day += week_day[i-1];
+        }
+        let w = day%7;
+        
+        for(let i=0; i<w; i++){
+            const target = document.getElementById('tr1');
+            const append = document.createElement('td');
+            append.innerHTML = "";
+            target.append(append);
+        }
+        let line = 0;
+        const t = ['tr1','tr2','tr3','tr4','tr5','tr6'];
+        console.log(week_day[month-1]);
+        for(let i=1; i<=week_day[month-1]; i++){
+            if(w==7){
+                line++;
+                w=0;
+            }
+            const target = document.getElementById(t[line]);
+            const append = document.createElement('td');
+            append.innerHTML = i;
+            target.append(append);
+            w++;
+        }
+        return week[day%7];
+    }
+ </script>
+
+<body>
+    <div class="wrapper">
+        
+        <table id="table" style="width: 30px; height: 20px;">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input id="year" type="text" class="input_day"></td>
+                <td><input id="month" type="text" class="input_day"></td>
+                <td><button class="btn" onclick="
+                    alert(make_cal(document.querySelector('#year').value,document.querySelector('#month').value));
+                    ">Run</button></td>
+            </tr>
+            <tr class="out_line">
+                <td>SUN</td>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+                <td>THU</td>
+                <td>FRI</td>
+                <td>SAT</td>
+            </tr>
+            <tr id="tr1">
+                
+            </tr>
+            <tr id="tr2">
+                
+            </tr>
+            <tr id="tr3">
+                
+            </tr>
+            <tr id="tr4">
+                
+            </tr>
+            <tr id="tr5">
+                
+            </tr>
+            <tr id="tr6">
+                
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
