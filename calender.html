@@ -5,7 +5,6 @@
     <title>CALENDER-HTML</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/title_style.css">
-    <link rel="stylesheet" href="css/gray_button.css">
 </head>
 
  <style>
@@ -14,12 +13,6 @@
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
-    }
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
     }
     .calender{
         border-radius: 10%;
@@ -40,7 +33,7 @@
     }
     td{
         height: 50px;
-        width: 80px;
+        width: 100px;
     }
     .input_day{
         height: 30px;
@@ -52,8 +45,27 @@
         text-align: center;
     }
     .btn{
-        height: 40px;
-        width: 60px;
+        height: 30px;
+        width: 50px;
+        border: 3px solid gray;
+        border-radius: 5px;
+        background-color: white;
+        cursor: pointer;
+
+        margin: 0;
+        padding: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn:hover{
+        background-color: gray;
+        color: white;
+    }
+    .one{
+        padding-left: 20px;
+        padding-right: 20px;
     }
  </style>
 
@@ -121,18 +133,20 @@
                 <td></td>
                 <td><input id="year" type="text" class="input_day"></td>
                 <td><input id="month" type="text" class="input_day"></td>
-                <td><button class="btn" onclick="
-                    alert(make_cal(document.querySelector('#year').value,document.querySelector('#month').value));
-                    ">Run</button></td>
+                <td><div type="button" class="btn" value="Run" onclick="
+                    var year = document.querySelector('#year').value;
+                    var month = document.querySelector('#month').value;
+                    make_cal(year, month);
+                    ">Run</div></td>
             </tr>
             <tr class="out_line">
-                <td>SUN</td>
-                <td>MON</td>
-                <td>TUE</td>
-                <td>WED</td>
-                <td>THU</td>
-                <td>FRI</td>
-                <td>SAT</td>
+                <td class="one">SUN</td>
+                <td class="one">MON</td>
+                <td class="one">TUE</td>
+                <td class="one">WED</td>
+                <td class="one">THU</td>
+                <td class="one">FRI</td>
+                <td class="one">SAT</td>
             </tr>
             <tr id="tr1">
                 
