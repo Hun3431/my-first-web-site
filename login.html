@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CALENDER-HTML</title>
+    <meta charset="utf-8">
+</head>
+
+ <style>
+    @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+    .rayout{
+        font-family: 'LINESeedKR-Bd';
+        width: 440px;
+        height: 350px;
+        margin: auto;
+        position: relative;
+    }
+    span{
+        padding: 10px;
+    }
+    li{
+        list-style: none;
+    }
+    ul{
+        padding-left: 30px;
+        padding-right: 30px;
+        list-style-type: none;
+    }
+    .link_warp {
+        color: black;
+        text-decoration: none;
+        float: left;
+    }
+    .login_warp{
+        border: black solid 2px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px;
+        background-color: darkgreen;
+        color: white;
+        font-size: 20px;
+    }
+    .login_box{
+        border: black solid 2px;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .text_box{
+        float: left;
+        margin: 0 10px;
+        width: 60px;
+        text-align: center;
+    }
+    .input_box{
+        width:300px;
+        height: 20px;
+        border: none;
+        margin-right: 10px;
+    }
+    .title_style{
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: darkgreen;
+    }
+ </style>
+
+ <script>
+ </script>
+
+<body>
+    <div class="rayout">
+        <div style="
+        border: darkgreen solid 2px;
+        border-radius: 30px;
+        background-color: blanchedalmond;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        ">
+        <!--상하좌우 정렬 링크: https://hianna.tistory.com/675 -->
+            <div class="title_style">LOGIN</div>
+            <div class="login_box">
+                <div style="padding: 10px 0 ;">
+                    <div class="text_box">아이디</div>
+                    <input type="text" id="id" class="input_box" maxlength="10">
+                </div>
+                <div style="padding: 10px 0; border-top: black solid 2px;">
+                    <div class="text_box">비밀번호</div>
+                    <input type="password" id="pw" class="input_box" maxlength="10">
+                </div>
+
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="join.html" style="color: black; text-decoration: none"><div class="login_warp">로그인</div></a>
+                <ul style="margin-left: 0px; display: flex; justify-content: space-between;">
+                    <li ><a class="link_warp" href="find_id.html">아이디 찾기</a></li>
+                    <li>|</li>
+                    <li ><a class="link_warp" href="find_pw.html">비밀번호 찾기</a></li>
+                    <li>|</li>
+                    <li ><a class="link_warp" href="join.html">회원가입</a></li>
+                
+                
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
